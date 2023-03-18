@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="{{ asset('node_modules/bootstrap/dist/css/bootstrap.min.css') }}">
 {% endblock %}
 {% block body %}
-<h1>Liste des todos </h1>
+<h1 class="container my-3  text-bold text-uppercase text-center">Liste des todos </h1>
 {% for message in app.session.flashBag.get('info') %}
     <div class="alert alert-info" role="alert">
    {{message}}
@@ -23,7 +23,7 @@
    {{message}}
 </div>
 {% endfor %}
-
+    <div class="container">
 	<ol class="list-group list-group-numbered">
 		{% for name, content  in app.session.get('todos') %}
             
@@ -33,6 +33,6 @@
         {% endfor %}
 		
 	</ol>
-
+</div>
 
 {% endblock %}
