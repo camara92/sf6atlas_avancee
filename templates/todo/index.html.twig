@@ -7,7 +7,15 @@
 <link rel="stylesheet" href="{{ asset('node_modules/bootstrap/dist/css/bootstrap.min.css') }}">
 {% endblock %}
 {% block body %}
-<h1 class="container my-3  text-bold text-uppercase text-center">Liste des todos </h1>
+<h1 class="container my-3  text-bold text-uppercase text-center  bg-black text-white">Liste des todos </h1>
+
+<div class="container mb-3 me-2 ">
+<a class="me-2 text-decoration-none text-bg-dark bg-danger" href="{{path('todo.reset')}}">Reset de la liste </a>
+
+
+<a href="{{path('todo.add')}} ">Ajouter une tâche </a>
+</div>
+
 {% for message in app.session.flashBag.get('info') %}
     <div class="alert alert-info" role="alert">
    {{message}}
