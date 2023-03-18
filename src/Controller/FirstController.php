@@ -10,7 +10,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class FirstController extends AbstractController
 {
-    #[Route('/first', name: 'app_first')]
+    #[Route('/todo', name: 'app_first')]
     public function index(): Response
     {
         //die('Je suis la requète first ! '); 
